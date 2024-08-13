@@ -33,8 +33,19 @@ const getUser = (id) => {
     return users.find(user => user.id === id);
 }
 
+const removeUser = (id) => {
+    // 배열 안에 해당하는게 없으면 -1을 반환한다. 
+    const index = users.findIndex((user) => user.id === id);
+
+    if(index !== -1){
+        return users.splice(index, 1)[0];
+        // return 값이 socket.on('disconnect')에서 user로 간다. 
+    }
+}
+
 module.exports = {
     addUser,
     getUsersInRoom,
-    getUser
+    getUser,
+    removeUser
 }

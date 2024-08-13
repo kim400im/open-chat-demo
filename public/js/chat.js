@@ -17,7 +17,7 @@ socket.emit('join',{username, room}, (error) => {
         alert(error);
         location.href='/'; 
     }
-})
+});
 
 const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML;
 
@@ -43,10 +43,10 @@ socket.on('message', (message) => {
     })
 
     messages.insertAdjacentHTML('beforeend', html);
-    scrollBottom();
+    scrollToBottom();
 })
 
-function scrollBottom(){
+function scrollToBottom(){
     messages.scrollTop = messages.scrollHeight;
 }
 

@@ -10,9 +10,9 @@
     <div class="chat">
         <div id="sidebar" class="chat__sidebar"></div>
         <div class="chat__main">
-            <div id="messages" class="chat_messages"></div>
+            <div id="messages" class="chat__messages"></div>
             <div class="form__container">
-                <form>
+                <form id="message-form">
                     <input name="message" placeholder="메시지를 입력하세요" required>
                     <button>전송</button>
                 </form>
@@ -36,6 +36,7 @@
                 <span class="message__name">{{username}}</span>
                 <span class="message__meta">{{createdAt}}</span>
             </p>
+            <p>{{message}}</p>
         </div>
 
 

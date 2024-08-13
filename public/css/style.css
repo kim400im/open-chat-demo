@@ -9,7 +9,7 @@ h2 {
 }
 
 label {
-    display: black;
+    display: block;
     font-size: 14px;
     color: #777;
 }
